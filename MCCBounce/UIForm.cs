@@ -57,7 +57,7 @@ namespace MCCBounce
             process.Memory = new ExternalProcessMemory(process.Handle);
 
             var moduleBase = process["halo2.dll"].BaseAddress;
-            int tickrateAddress = 0x019A2F40;
+            int tickrateAddress = 0x013E87E0;
             IntPtr tickrate = process.Memory.Read<IntPtr>(moduleBase + tickrateAddress);
 
             if (tickrate.ToInt64() == 0)
